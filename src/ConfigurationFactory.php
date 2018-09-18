@@ -111,7 +111,7 @@ class ConfigurationFactory
      * @param string $baseDir
      * @param string $userDir
      * @param array $extConfigs
-     * @return \swiftphp\core\config\IConfiguration
+     * @return IConfiguration
      */
     private static function returnConfig(IConfiguration $config,$baseDir="",$userDir="",$extConfigs=[])
     {
