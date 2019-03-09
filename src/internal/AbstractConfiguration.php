@@ -168,7 +168,12 @@ abstract class AbstractConfiguration implements IConfiguration
     {
         if(is_null($this->m_objectFactory)){
             $config = $this->getConfigValues(BuiltInConst::OBJECT_FACTORY_CONFIG_SESSION);
-            $class=$config["class"];
+            $class="";
+            if(array_key_exists("class", $config)){
+                $class=$config["class"];
+            }else {
+                $class=ObjectFactory::class;
+            }
             if(!class_exists($class)){
                 throw new \Exception("Class '".$class."' not found");
             }

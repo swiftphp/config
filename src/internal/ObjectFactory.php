@@ -59,7 +59,7 @@ class ObjectFactory implements IObjectFactory,IConfigurable
      * 对象配置节点
      * @var string
      */
-    private $m_configSection;
+    private $m_configSection="objects";
 
     /**
      * 对象信息配置,键为对象id
